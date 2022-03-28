@@ -1,41 +1,8 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license === "MIT license") {
-    return `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
-  }
-
-  if (license === "Mozilla Public License 2.0") {
-    return `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
-  }
-
-  if (license === "Common Development and Distribution License") {
-    return `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
-  }
-
-  if (license === "None") {
-  }
-
-  else {
-    return 'You must choose one of the following options'
-  }
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) { }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(answers) {
-  return `# ${answers.titleOfProject}
+# test
 
   ## Description
   
- ${answers.description}
+ test
   
   ## Table of Contents (Optional)
   
@@ -56,7 +23,7 @@ function generateMarkdown(answers) {
 
   ## Credits
   
-  ${answers.contributors}
+  undefined
   List your collaborators, if any, with links to their GitHub profiles.
   
   If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
@@ -65,7 +32,7 @@ function generateMarkdown(answers) {
   
   ## License
   
-${renderLicenseBadge(answers.license)}
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
   
   🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
   
@@ -87,7 +54,3 @@ ${renderLicenseBadge(answers.license)}
   
   Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
-`;
-}
-
-module.exports = generateMarkdown;
