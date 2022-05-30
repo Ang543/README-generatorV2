@@ -35,7 +35,7 @@ const questions = [
         choices:[
             "MIT license",
             "Mozilla Public License 2.0",
-            "Common Development and Distribution License",
+            "Apache License 2.0",
             "None"
         ]
     },
@@ -70,7 +70,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+    fs.writeFile('./README.md', data, err => {
+        if (err) throw err;
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {

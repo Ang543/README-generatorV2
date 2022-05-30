@@ -23,11 +23,60 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+	if (license != 'none') {
+		return `
+# Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Contribution](#contribution)
+4. [Testing](#testing)
+5. [Questions](#questions)
+6. [License](#license)
+		`;
+	} else {
+		return `
+# Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Contribution](#contribution)
+4. [Testing](#testing)
+5. [Questions](#questions)
+		`;
+	};
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {
+	// console.log('renderLicenseSection', license);
+	if (license === 'MIT License') {
+		return `
+# License
+[MIT](https://choosealicense.com/licenses/mit/)
+		`;
+	};
+
+	if (license === 'Apache License 2.0') {
+		return `
+# License
+[Apache](https://choosealicense.com/licenses/apache-2.0/)
+		`;
+	};
+
+	if (license === 'Mozilla Public License 2.0') {
+		return `
+# License
+[Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)
+		`;
+	};
+
+	if (license === 'none') {
+		return ``;
+	};
+	// if there is a license show section title and badge
+	// if there is no license we want to get rid of it so add empty string
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
@@ -37,55 +86,25 @@ function generateMarkdown(answers) {
   
  ${answers.description}
   
-  ## Table of Contents (Optional)
-  
-  If your README is long, add a table of contents to make it easy for users to find what they need.
-  
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
   
   ## Installation
   
-  What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-  
+  ${answers.installiation}
+
   ## Usage
   
-  Provide instructions and examples for use. Include screenshots as needed.
+  ${answers.usage}
 
   ## Credits
   
   ${answers.contributors}
-  List your collaborators, if any, with links to their GitHub profiles.
-  
-  If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-  
-  If you followed tutorials, include links to those here as well.
   
   ## License
   
 ${renderLicenseBadge(answers.license)}
+${renderLicenseLink(answers.license)}
+
   
-  🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-  
-  ## Badges
-  
-  ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-  
-  Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-  
-  ## Features
-  
-  If your project has a lot of features, list them here.
-  
-  ## How to Contribute
-  
-  If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-  
-  ## Tests
-  
-  Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
 `;
 }
