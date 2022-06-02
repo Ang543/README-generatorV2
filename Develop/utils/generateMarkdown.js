@@ -2,15 +2,15 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "MIT license") {
-    return `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
+    return `![badmath](https://choosealicense.com/licenses/mit/)`
   }
 
   if (license === "Mozilla Public License 2.0") {
-    return `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
+    return `![badmath](https://choosealicense.com/licenses/mpl-2.0/)`
   }
 
-  if (license === "Common Development and Distribution License") {
-    return `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
+  if (license === "Apache License 2.0") {
+    return `![badmath](https://choosealicense.com/licenses/apache-2.0/)`
   }
 
   if (license === "None") {
@@ -44,38 +44,6 @@ function renderLicenseLink(license) {
 5. [Questions](#questions)
 		`;
 	};
-};
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-	// console.log('renderLicenseSection', license);
-	if (license === 'MIT License') {
-		return `
-# License
-[MIT](https://choosealicense.com/licenses/mit/)
-		`;
-	};
-
-	if (license === 'Apache License 2.0') {
-		return `
-# License
-[Apache](https://choosealicense.com/licenses/apache-2.0/)
-		`;
-	};
-
-	if (license === 'Mozilla Public License 2.0') {
-		return `
-# License
-[Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)
-		`;
-	};
-
-	if (license === 'none') {
-		return ``;
-	};
-	// if there is a license show section title and badge
-	// if there is no license we want to get rid of it so add empty string
 };
 
 // TODO: Create a function to generate markdown for README
