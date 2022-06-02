@@ -1,6 +1,6 @@
-# Test
+# README Generator
 
-  ![badmath](https://choosealicense.com/licenses/mpl-2.0/)
+  ![badmath](https://choosealicense.com/licenses/mit/)
   
 # Table of Contents
 1. [Installation](#installation)
@@ -13,21 +13,21 @@
 
   ## Description
   
- test
+ A Node based README generator that runs in the terminal
   
   
   ## Installation
   
-  test
+  Type "npm install" in the terminal at the root of the directory
 
   ## Usage
   
-  test
+  A quick easy way to write a professional README.md file
 
   ## Credits
 
-  test
-  test
-  Jesus
+  Ang543
+  angelocsaverino@gmail.com
+  undefined
    
 
