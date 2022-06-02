@@ -24,7 +24,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-	if (license != 'none') {
+	if (license != 'None') {
 		return `
 # Table of Contents
 1. [Installation](#installation)
@@ -82,6 +82,9 @@ function renderLicenseSection(license) {
 function generateMarkdown(answers) {
   return `# ${answers.titleOfProject}
 
+  ${renderLicenseBadge(answers.license)}
+  ${renderLicenseLink(answers.license)}
+
   ## Description
   
  ${answers.description}
@@ -89,22 +92,18 @@ function generateMarkdown(answers) {
   
   ## Installation
   
-  ${answers.installiation}
+  ${answers.installation}
 
   ## Usage
   
   ${answers.usage}
 
   ## Credits
-  
-  ${answers.contributors}
-  
-  ## License
-  
-${renderLicenseBadge(answers.license)}
-${renderLicenseLink(answers.license)}
 
-  
+  ${answers.githubUsername}
+  ${answers.emailAddress}
+  ${answers.contributors}
+   
 
 `;
 }
