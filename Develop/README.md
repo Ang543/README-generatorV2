@@ -1,4 +1,4 @@
-# README Generator
+# test
 
   ![badmath](https://choosealicense.com/licenses/mit/)
   
@@ -13,21 +13,21 @@
 
   ## Description
   
- A Node based README generator that runs in the terminal
+ test
   
   
   ## Installation
   
-  Type "npm install" in the terminal at the root of the directory
+  test
 
   ## Usage
   
-  A quick easy way to write a professional README.md file
+  test
 
   ## Credits
 
-  Ang543
-  angelocsaverino@gmail.com
+  test
+  test
   undefined
    
 
